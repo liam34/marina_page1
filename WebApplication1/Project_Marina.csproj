@@ -72,7 +72,7 @@
     <Content Include="LeaseSlipPage.aspx" />
     <Content Include="Registration_page.aspx" />
     <Content Include="Web.config" />
-    <Content Include="homePage.aspx" />
+    <Content Include="HomePage.aspx" />
     <Content Include="DockPage.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -105,12 +105,12 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
-    <Compile Include="homePage.aspx.cs">
-      <DependentUpon>homePage.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="homePage.aspx.designer.cs">
-      <DependentUpon>homePage.aspx</DependentUpon>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="DockPage.aspx.cs">
       <DependentUpon>DockPage.aspx</DependentUpon>

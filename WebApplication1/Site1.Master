@@ -6,35 +6,41 @@
 
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+   
 
 </head>
-<img src="images/inlandmarina_banner.jpg" />
 
-    jumbotron here
-    <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink" 
-                        CssClass="nav nav-pills nav-stacked">
-                        <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
-                        <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
-                        <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
-                        <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
-                    </asp:BulletedList>
 <body>
-    <form id="form1" runat="server">
+         <form id="form1" runat="server">
+         <img src="images/inlandmarina_banner.jpg" />
 
+             <div class="jumbotron">
+              <h1 class="display-4">Hello, world!</h1>
+              <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+              <hr class="my-4">
+              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+              <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              </p>
+            </div>
 
-        header here
+         
+        <asp:BulletedList ID="BulletedList2" runat="server" DisplayMode="HyperLink"
+            CssClass="nav nav-pills nav-stacked">
+            <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
+            <asp:ListItem Value="~/DockPage.aspx">Cart</asp:ListItem>
+            <asp:ListItem Value="~/Registration_page.aspx">Products</asp:ListItem>
+            <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
+        </asp:BulletedList>
+
         <div>
-           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-           </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
         </div>
 
-       <footer class="text-center text-info">
-            <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
-                <%-- default content - can be overridden by content pages --%>
-                <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label>
-            </asp:ContentPlaceHolder>
+        <footer class="text-center text-info">   
+            
+            footer here
         </footer>
     </form>
 </body>
