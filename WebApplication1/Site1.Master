@@ -5,14 +5,16 @@
 <html>
 
 <head runat="server">
-    <title></title>
+
+<title></title>
    
 
 </head>
 
 <body>
-         <form id="form1" runat="server">
+  <form id="form1" runat="server">
          <img src="images/inlandmarina_banner.jpg" />
+
 
              <div class="jumbotron">
               <h1 class="display-4">Hello, world!</h1>
@@ -20,18 +22,21 @@
               <hr class="my-4">
               <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
               <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-              </p>
-            </div>
-
-         
-        <asp:BulletedList ID="BulletedList2" runat="server" DisplayMode="HyperLink"
+              <a class="btn btn-primary btn-lg" href="#" role="button">Nav</a>
+                    
+        <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
             CssClass="nav nav-pills nav-stacked">
             <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
             <asp:ListItem Value="~/DockPage.aspx">Cart</asp:ListItem>
             <asp:ListItem Value="~/Registration_page.aspx">Products</asp:ListItem>
             <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
         </asp:BulletedList>
+
+              </p>
+            </div>
+
+         
+     
 
         <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -40,7 +45,8 @@
 
         <footer class="text-center text-info">   
             
-            footer here
+         footer here
+
         </footer>
     </form>
 </body>
