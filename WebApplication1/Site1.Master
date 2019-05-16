@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<img src="images/inlandmarina_banner.jpg" />
+
+    jumbotron here
+    <asp:BulletedList ID="blNav" runat="server" DisplayMode="HyperLink" 
+                        CssClass="nav nav-pills nav-stacked">
+                        <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
+                        <asp:ListItem Value="~/Cart.aspx">Cart</asp:ListItem>
+                        <asp:ListItem Value="~/Products.aspx">Products</asp:ListItem>
+                        <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
+                    </asp:BulletedList>
+<body>
+    <form id="form1" runat="server">
+
+
+        header here
+        <div>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           </asp:ContentPlaceHolder>
+        </div>
+
+       <footer class="text-center text-info">
+            <asp:ContentPlaceHolder ID="footerPlaceHolder" runat="server">
+                <%-- default content - can be overridden by content pages --%>
+                <asp:Label ID="lblDaysUntilHalloween" runat="server"></asp:Label>
+            </asp:ContentPlaceHolder>
+        </footer>
+    </form>
+</body>
+</html>
