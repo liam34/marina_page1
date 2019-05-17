@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="ContactUs.aspx" />
     <Content Include="images\inlandmarina_banner.jpg" />
+    <Content Include="images\poweredbyaspnet.gif" />
     <Content Include="LeaseSlipPage.aspx" />
     <Content Include="Registration_page.aspx" />
     <Content Include="Web.config" />

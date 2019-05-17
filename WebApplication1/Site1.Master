@@ -1,19 +1,15 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
 
 <!DOCTYPE html>
-
 <html>
-
 <head runat="server">
 
-<title></title>
-   
+<title></title>   
 
 </head>
-
 <body>
-  <form id="form1" runat="server">
-         <img src="images/inlandmarina_banner.jpg" />
+<form id="form1" runat="server">
+         <img src="images/inlandmarina_banner.jpg" /><img src="images/inlandmarina_banner.jpg" />
 
 
              <div class="jumbotron">
@@ -24,14 +20,14 @@
               <p class="lead">
               <a class="btn btn-primary btn-lg" href="#" role="button">Nav</a>
                     
-        <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
+       <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
             CssClass="nav nav-pills nav-stacked">
             <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
             <asp:ListItem Value="~/DockPage.aspx">Cart</asp:ListItem>
             <asp:ListItem Value="~/Registration_page.aspx">Products</asp:ListItem>
             <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
         </asp:BulletedList>
-
+        
               </p>
             </div>
 
@@ -43,9 +39,10 @@
         </asp:ContentPlaceHolder>
         </div>
 
-        <footer class="text-center text-info">   
-            
-         footer here
+        <footer class="text-center text-info">               
+         <div id="footerContent">
+         <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
+         </div>
 
         </footer>
     </form>
