@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContactUs.aspx" />
+    <Content Include="images\boat1.jpg" />
+    <Content Include="images\boat2.jpg" />
+    <Content Include="images\boat3.jpg" />
     <Content Include="images\inlandmarina_banner.jpg" />
     <Content Include="images\poweredbyaspnet.gif" />
     <Content Include="LeaseSlipPage.aspx" />
