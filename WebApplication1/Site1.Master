@@ -6,60 +6,66 @@
 <head runat="server">
 
 <title></title>
-    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="marina.css" rel="stylesheet" />
 <style>
-    body{
-        background-color:lightblue;
-        padding-left: initial;
-
-    }
-
-
     
-</style>
-
-</head>
     
-<body>
-<form id="form1" runat="server">
-<img src="images/inlandmarina_banner.jpg" />
+   </style>
+</head>   
+ <body>
+     <form id="form1" runat="server">
+      <img src="images/inlandmarina_banner.jpg" /><asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
+                            CssClass="nav nav-pills nav-stacked">
+                         <asp:ListItem Value="~/homePage.aspx">Home  </asp:ListItem>
+                       <asp:ListItem Value="~/DockPage.aspx">Cart  </asp:ListItem>
+                     <asp:ListItem Value="~/Registration_page.aspx">Products  </asp:ListItem>
+                   <asp:ListItem Value="~/ContactUs.aspx">Contact  </asp:ListItem>
+                 </asp:BulletedList>
 
-       
-        
-              <div class="jumbotron">
-              <h1 class="display-4">Welcome To Inland Marina</h1>
-              <p class="lead">Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major
+         
+
+        &nbsp;<div class="jumbotron">
+                   <h1 class="display-4">Welcome To Inland Marina</h1>
+                 <p class="lead">Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major
                 centers in the south west.
                 Inland Marina was established in the 1967 shortly after Inland Lake was created as a result of the South
                 West damn. From its humble beginnings, it has grown to be the largest marina on Inland Lake. Due to
                 the warm climate that extends year-round, Inland Lake has become a popular tourist destination in the
                 south west. Boat owners from California, Arizona, Nevada, and Utah are attracted to the area. Inland
                 Marina has 90 slips ranging in size from 16 to 32 feet in length. Dock services include electrical and
-                fresh water.                </p>
-              <hr class="my-4">
-              <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Nav
-              <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
-            CssClass="nav nav-pills nav-stacked">
-            <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
-            <asp:ListItem Value="~/DockPage.aspx">Cart</asp:ListItem>
-            <asp:ListItem Value="~/Registration_page.aspx">Products</asp:ListItem>
-            <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
-            </asp:BulletedList>
+                fresh water.
+                </p>
+                  <hr class="my-4">
+                    <p>
 
-              </a>
-              </p>
-              </div>    
+         
+
+        </div>    
 
         <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        </asp:ContentPlaceHolder>
-        </div>
+            <p>
+                <br />
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+            <p>
+            </p>
+          </asp:ContentPlaceHolder>
+              </div>
 
-        <footer class="text-center text-info">               
-         <div id="footerContent">
-         <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
+            <footer class="text-center text-info">               
+           <div id="footerContent">
+          <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
          </div>
 
         </footer>

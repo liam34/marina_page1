@@ -1,0 +1,9 @@
+﻿body {
+    background-color: lightcoral;
+    padding-left: initial;
+}
+container-card {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
