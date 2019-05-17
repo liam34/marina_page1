@@ -2,34 +2,52 @@
 
 <!DOCTYPE html>
 <html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <head runat="server">
 
-<title></title>   
+<title></title>
+    
+<style>
+    body{
+        background-color:lightblue;
+        padding-left: initial;
+
+    }
+
+    
+</style>
 
 </head>
+    
 <body>
 <form id="form1" runat="server">
-         <img src="images/inlandmarina_banner.jpg" /><img src="images/inlandmarina_banner.jpg" />
+<img src="images/inlandmarina_banner.jpg" />
 
-
-             <div class="jumbotron">
+       
+        
+              <div class="jumbotron">
               <h1 class="display-4">Hello, world!</h1>
               <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
               <hr class="my-4">
               <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
               <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Nav</a>
-                    
-       <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
+              <a class="btn btn-primary btn-lg" href="#" role="button">Nav
+              <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
             CssClass="nav nav-pills nav-stacked">
             <asp:ListItem Value="~/homePage.aspx">Home</asp:ListItem>
             <asp:ListItem Value="~/DockPage.aspx">Cart</asp:ListItem>
             <asp:ListItem Value="~/Registration_page.aspx">Products</asp:ListItem>
             <asp:ListItem Value="~/ContactUs.aspx">Contact</asp:ListItem>
-        </asp:BulletedList>
-        
+            </asp:BulletedList>
+
+              </a>
               </p>
-            </div>
+              </div>
+
+
+      
+            
 
          
      
