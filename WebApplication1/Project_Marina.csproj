@@ -77,7 +77,7 @@
     <Content Include="LeaseSlipPage.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="marina.css" />
-    <Content Include="Registration_page.aspx" />
+    <Content Include="Registration.aspx" />
     <Content Include="Web.config" />
     <Content Include="HomePage.aspx" />
     <Content Include="DockPage.aspx" />
@@ -112,12 +112,12 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration_page.aspx.cs">
-      <DependentUpon>Registration_page.aspx</DependentUpon>
+    <Compile Include="Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration_page.aspx.designer.cs">
-      <DependentUpon>Registration_page.aspx</DependentUpon>
+    <Compile Include="Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
