@@ -9,8 +9,13 @@
         Phone: <br />
         <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox><br />
         City: <br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox><br /><br />
+        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox><br />
+        User Name: <br />
+        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox><br />
+        Password: <br />
+        <asp:TextBox ID="TextBox6" TextMode="Password" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
     </form>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
-</asp:Content>
+    <br />
+    <asp:Label ID="Label1" runat="server"></asp:Label>
+    </asp:Content>

@@ -23,14 +23,16 @@
                     
                                    <ul>
                                       <li><a href="HomePage.aspx">Home</a></li>
-                                      <li><a href="DockPage.aspx">Dock Page</a></li>
                                       <li><a href="ContactUs.aspx">Contact Us</a></li>
                                       <li><a href="Registration.aspx">Registration</a></li>
-                                      <li><a href="Login.aspx">Log in</a></li>
                                       <li style="float:right"><a class="active" href="#about">About</a></li>
                                     </ul>
 
-   
+
+
+
+
+    
          
 
                  &nbsp;<div class="jumbotron">

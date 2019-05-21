@@ -68,12 +68,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ContactUs.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="images\boat1.jpg" />
     <Content Include="images\boat2.jpg" />
     <Content Include="images\boat3.jpg" />
     <Content Include="images\inlandmarina_banner.jpg" />
     <Content Include="images\poweredbyaspnet.gif" />
     <Content Include="LeaseSlipPage.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="marina.css" />
     <Content Include="Registration.aspx" />
     <Content Include="Web.config" />
@@ -88,12 +90,26 @@
     <Compile Include="ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LeaseSlipPage.aspx.cs">
       <DependentUpon>LeaseSlipPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="LeaseSlipPage.aspx.designer.cs">
       <DependentUpon>LeaseSlipPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registration.aspx.cs">
