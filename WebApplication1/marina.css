@@ -9,17 +9,55 @@
     float: none; /* Added */
     margin-bottom: 10px; /* Added */
 }
+.navi{
+    margin: 10px 10px;
+}
 
-.para{
-    color: white;
+.para {
+    color: #800080;
 }
 .container-text{
     text-align:center;
 }
 .content-text{
-    font-size:medium;
+    font-size:large;
     color:cornflowerblue;
+
 }
+
+banner{
+    display:inline-block;
+}
+
+/*//navigation style*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+.active {
+    background-color: #4CAF50;
+}
+
 /*footer design*/
 .footer-distributed {
     background-color: #292c2f;
