@@ -7,25 +7,27 @@
 
 <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="marina.css" rel="stylesheet" />
-<style>
-    
-    
-   </style>
+    <link href="marina.css" rel="stylesheet" />   	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+<style>   
+</style>
+
 </head>   
  <body>
+     
      <form id="form1" runat="server">
       <img src="images/inlandmarina_banner.jpg" /><asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink"
                             CssClass="nav nav-pills nav-stacked">
                          <asp:ListItem Value="~/homePage.aspx">Home  </asp:ListItem>
-                       <asp:ListItem Value="~/DockPage.aspx">Cart  </asp:ListItem>
-                     <asp:ListItem Value="~/Registration_page.aspx">Products  </asp:ListItem>
-                   <asp:ListItem Value="~/ContactUs.aspx">Contact  </asp:ListItem>
+                       <asp:ListItem Value="~/DockPage.aspx">Dock Page  </asp:ListItem>
+                     <asp:ListItem Value="~/Registration_page.aspx">Registration  </asp:ListItem>
+                   <asp:ListItem Value="~/ContactUs.aspx">Contact Us  </asp:ListItem>
                  </asp:BulletedList>
-
+    
          
 
-        &nbsp;<div class="jumbotron">
+                  &nbsp;<div class="jumbotron">
                    <h1 class="display-4">Welcome To Inland Marina</h1>
                  <p class="lead">Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major
                 centers in the south west.
@@ -40,31 +42,78 @@
                     <p>
 
          
-
+        
         </div>    
-
         <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            <p>
-                <br />
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
-            <p>
-            </p>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
           </asp:ContentPlaceHolder>
-              </div>
+          </div>
+         
+          <footer class="text-center text-info">  
+          </footer>  
+	
+	
 
-            <footer class="text-center text-info">               
-           <div id="footerContent">
+	<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				
+				<div>
+				
+				
+			
+				
+				</div>
+
+				<p class="footer-links">
+					<a href="index.php">Home</a>
+					·
+					<a href="#">Dock Page</a>
+					·
+					<a href="#">Lease Slip Page</a>
+					·
+					<a href="#">ContactUs</a>
+					
+					
+				</p>
+
+				<p class="footer-company-name">InLand Marina LTD. &copy; 2019-2020</p>
+				
+			</div>			
+			<div class="footer-center">
+
+				<div>
+
+				
+					<i class="fa fa-map-marker"></i>
+					<p><span>10230 Jasper Ave, Edmonton, AB T5J 4P6</span> Downtown Edmonton Alberta, Canada</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>1-877-233-4567</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">info@inlandmarina.com</a></p><br>
+					<!-- <p><img height="110" width="100" src="images/expedia.png"></p> -->
+				</div>
+
+			</div>
+			<div class="footer-right">
+			<p class="footer-company-about">
+			    
+					New Life, New Discoveries, and many more sweet memories. Bon Voyage!
+			</p>
+            </div>
+			<div class="footer-icons">					
+			<div>								
+			</div>
+			</div>	
+          <div id="footerContent">
+          <p class="para">Purple Group Co.</p>
           <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
          </div>
 

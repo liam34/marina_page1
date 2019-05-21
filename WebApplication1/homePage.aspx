@@ -2,8 +2,9 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-                <div class="container-card">
+    
+             
+                  
                  <div class="row">
                  <div class="card" style="width: 18rem;">
                   <img src="images/boat1.jpg" class="card-img-top" alt="...">
@@ -30,7 +31,15 @@
                   </div>  
                  </div>
                 </div>
-                </div>
- 
+    <br >    
+    <br > 
+    <br > 
+    <br > 
+    <br > 
+    <br > 
+    <br > 
+    <br > 
+    
+  
 
 </asp:Content>
