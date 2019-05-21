@@ -31,17 +31,7 @@
 
 
 
-<%--                               <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink" CssClass="nav nav-pills nav-stacked">
-                            
-                         <asp:ListItem Value="~/homePage.aspx">Home  </asp:ListItem>
-                                   
-                       <asp:ListItem Value="~/DockPage.aspx">Dock Page  </asp:ListItem>
-                                   
-                     <asp:ListItem Value="~/Registration_page.aspx">Registration  </asp:ListItem>
-                                   
-                   <asp:ListItem Value="~/ContactUs.aspx">Contact Us  </asp:ListItem>
 
-                 </asp:BulletedList>--%>
     
          
 
