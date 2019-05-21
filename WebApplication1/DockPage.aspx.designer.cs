@@ -85,6 +85,15 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.GridView GridView3;
         
         /// <summary>
+        /// GridView3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+      
+        
+        /// <summary>
         /// SqlDataSourceAvailableSlip control.
         /// </summary>
         /// <remarks>

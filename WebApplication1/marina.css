@@ -168,7 +168,7 @@ li {
             ;
         }
 
-*/
+
 /* Footer Right  */
 .footer-distributed .footer-right {
     width: 20%;
@@ -227,11 +227,6 @@ li {
             text-align: center;
         }
 
-            .footer-distributed .footer-center i {
+            .footer-distributed .footer-center i{
                 margin-left: 0;
-            }
-
-	
-
-
-
+       }
