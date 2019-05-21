@@ -4,12 +4,106 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace WebApplication1
 {
     public partial class LeaseSlipPage : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void GridView1_CreatingModelDataSource(object sender, CreatingModelDataSourceEventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            GridView2.DataBind();
+            GridView2.Visible = true;
+            GridView1.DataBind();
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            int CustomerID = Convert.ToInt32(custID.Text);
+            int index = GridView1.SelectedIndex;
+            string slipID = GridView1.Rows[index].Cells[1].Text;
+            int SlipID = Convert.ToInt32(slipID);
+            int qq1 = Data_Layer.LeaseDB.AddSlip(SlipID, CustomerID);
+            if (qq1 > 0)
+            { MessageBox.Show("Add a new lease"); }
+            else
+            { MessageBox.Show("Adding new lease is not successul"); }
+            GridView1.DataBind();
+            GridView2.DataBind();
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            int index = GridView2.SelectedIndex;
+            string slipID = GridView2.Rows[index].Cells[2].Text;
+            int SlipID = Convert.ToInt32(slipID);
+            int qq1 = Data_Layer.LeaseDB.DeleLease(SlipID);
+            GridView2.DataBind();
+            GridView1.DataBind();
+        }
+
+        protected void SqlDataSource2_Updating(object sender, SqlDataSourceCommandEventArgs e)
+        {
+
+        }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            GridView1.DataBind();
+        }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            GridView1.DataBind();
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Calendar1.Visible = true;
+        }
+
+        protected void Button8_Click(object sender, EventArgs e)
+        {
+            Calendar2.Visible = true;
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            TextBox3.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
+            Calendar1.Visible = false;
+        }
+
+        protected void Calendar2_SelectionChanged(object sender, EventArgs e)
+        {
+            DateTime date1 = Convert.ToDateTime(TextBox3.Text);
+            TextBox4.Text = Calendar2.SelectedDate.ToString("yyyy-MM-dd");
+            DateTime date2 = Convert.ToDateTime(TextBox4.Text);
+            if (date2 > date1)
+            { Calendar2.Visible = false; }
+            else
+            { Response.Write("<script>alert('leaver date can not early than arrive date')</script>"); }
+
+
+        }
+
+        protected void GridView1_DataBinding(object sender, EventArgs e)
         {
 
         }
