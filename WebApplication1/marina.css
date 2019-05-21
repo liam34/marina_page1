@@ -227,6 +227,56 @@ li {
             text-align: center;
         }
 
-            .footer-distributed .footer-center i{
+            .footer-distributed .footer-center i {
                 margin-left: 0;
-       }
+            }
+
+/*style for Lease page*/
+    #form10 {
+        margin-left: 130px;
+    }
+
+    .auto-style1 {
+        width: 199px;
+        height: 35px;
+    }
+
+    .auto-style4 {
+        margin-left: 47px;
+    }
+
+    .auto-style5 {
+        margin-left: 41px;
+        margin-top: 5px;
+    }
+
+    .auto-style3 {
+        margin-left: 0px;
+        margin-top:-200px;
+    }
+
+    .auto-style6 {
+        margin-left: 64px;
+    }
+
+    .auto-style7 {
+        margin-top: 28px;
+    }
+
+    .auto-style9 {
+        width: 571px;
+        height: 336px;
+        margin-left: 679px;
+        margin-top: -550px;
+    }
+
+    .auto-style10 {
+        margin-left: 3px;
+    }
+
+    .auto-style11 {
+        margin-left: 37px;
+    }
+
+
+}
