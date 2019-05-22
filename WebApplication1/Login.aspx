@@ -2,7 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form action="/" method="post">
         User Name: <br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
         Password: <br />
         <asp:TextBox ID="TextBox2" TextMode="Password" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" /><br />

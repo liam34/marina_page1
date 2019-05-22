@@ -7,4 +7,7 @@
     <asp:Button ID="Button1" runat="server" Text="Logout" OnClick="Button1_Click" />
 
 
+<asp:Button ID="Button2" runat="server" Height="44px" PostBackUrl="~/LeaseSlipPage.aspx" style="margin-left: 117px" Text="Booking" Width="109px" />
+
+
 </asp:Content>

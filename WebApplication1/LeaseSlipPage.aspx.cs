@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
 using System.Windows.Forms;
 
 namespace WebApplication1
@@ -12,7 +13,10 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string username = Session["username"].ToString();
+            Label3.Text = username;
+           custID.Text = GridView3.Rows[0].Cells[1].Text;
+          
         }
 
         protected void GridView1_CreatingModelDataSource(object sender, CreatingModelDataSourceEventArgs e)
@@ -20,18 +24,18 @@ namespace WebApplication1
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
+        //protected void Button1_Click(object sender, EventArgs e)
+        //{
 
-            GridView2.DataBind();
-            GridView2.Visible = true;
-            GridView1.DataBind();
-        }
+        //    GridView2.DataBind();
+        //    GridView2.Visible = true;
+        //    GridView1.DataBind();
+        //}
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-
+            Button2.Focus();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -47,6 +51,7 @@ namespace WebApplication1
             { MessageBox.Show("Adding new lease is not successul"); }
             GridView1.DataBind();
             GridView2.DataBind();
+            Button2.Focus();
         }
 
         protected void Button4_Click(object sender, EventArgs e)
@@ -57,6 +62,7 @@ namespace WebApplication1
             int qq1 = Data_Layer.LeaseDB.DeleLease(SlipID);
             GridView2.DataBind();
             GridView1.DataBind();
+            Button4.Focus();
         }
 
         protected void SqlDataSource2_Updating(object sender, SqlDataSourceCommandEventArgs e)
@@ -67,26 +73,32 @@ namespace WebApplication1
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
             GridView1.DataBind();
+            Button2.Focus();
         }
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
             GridView1.DataBind();
+            Button2.Focus();
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
+
             Calendar1.Visible = true;
+            Button2.Focus();
         }
 
         protected void Button8_Click(object sender, EventArgs e)
         {
             Calendar2.Visible = true;
+            Button2.Focus();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
             TextBox3.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
+            Button2.Focus();
             Calendar1.Visible = false;
         }
 
@@ -96,16 +108,34 @@ namespace WebApplication1
             TextBox4.Text = Calendar2.SelectedDate.ToString("yyyy-MM-dd");
             DateTime date2 = Convert.ToDateTime(TextBox4.Text);
             if (date2 > date1)
-            { Calendar2.Visible = false; }
+            {
+                Button2.Focus();
+                Calendar2.Visible = false;
+            }
             else
-            { Response.Write("<script>alert('leaver date can not early than arrive date')</script>"); }
-
-
-        }
+            {
+                Button2.Focus();
+                Response.Write("<script>alert('leave date can not early than arrive date')</script>"); }
+             }
 
         protected void GridView1_DataBinding(object sender, EventArgs e)
         {
 
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Button2.Focus();
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Map_Button.Focus();
+        }
+
+        protected void Map_Button_Click(object sender, EventArgs e)
+        {
+            Button2.Focus();
         }
     }
 }
