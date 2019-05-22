@@ -46,15 +46,16 @@ namespace Data_Layer
 
 
 
-        public static int AddSlip(int SlipID, int CustomerID)
+        public static int AddSlip(int SlipID, int CustomerID,DateTime ArriveDate, DateTime LeaveDate)
         {
-            string sql = "INSERT INTO Lease (SlipID,CustomerID)  VALUES  (@SlipID,@CustomerID)";
+            string sql = "INSERT INTO Lease (SlipID,CustomerID,ArriveDate,LeaveDate)  VALUES  (@SlipID,@CustomerID,@ArriveDate ,@LeaveDate)";
             SqlConnection connection = Data_Layer.MarinaDB.GetConnection();
             SqlCommand command = new SqlCommand(sql, connection);
 
             command.Parameters.AddWithValue("@SlipID", SlipID);
             command.Parameters.AddWithValue("@CustomerID", CustomerID);
-
+            command.Parameters.AddWithValue("@ArriveDate", ArriveDate);
+            command.Parameters.AddWithValue("@LeaveDate", LeaveDate);
             int qq = command.ExecuteNonQuery();
             return qq;
         }

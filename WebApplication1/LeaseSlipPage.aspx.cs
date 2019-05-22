@@ -16,6 +16,7 @@ namespace WebApplication1
             string username = Session["username"].ToString();
             Label3.Text = username;
            custID.Text = GridView3.Rows[0].Cells[1].Text;
+            Button2.Focus();
           
         }
 
@@ -50,7 +51,9 @@ namespace WebApplication1
                 }
                 string slipID = GridView1.Rows[index].Cells[1].Text;
                 int SlipID = Convert.ToInt32(slipID);
-                int qq1 = Data_Layer.LeaseDB.AddSlip(SlipID, CustomerID);
+                DateTime ArriveDate = Convert.ToDateTime(TextBox3.Text);
+                DateTime LeaveDate = Convert.ToDateTime(TextBox4.Text);
+            int qq1 = Data_Layer.LeaseDB.AddSlip(SlipID, CustomerID, ArriveDate,LeaveDate);
                 if (qq1 > 0)
                 {
                     MessageBox.Show("Add a new lease");
@@ -158,9 +161,9 @@ namespace WebApplication1
         protected void Button10_Click(object sender, EventArgs e)
         {
 
-            if ((TextBox1.Text == "") || (TextBox2.Text == ""))
+            if ((TextBox1.Text == "") || (TextBox2.Text == "")||(TextBox3.Text == "") || (TextBox4.Text == ""))
             {
-                MessageBox.Show(" width and length must be filled! ");
+                MessageBox.Show(" width and length,arrive date, leave date must be filled! ");
                 GridView1.Visible = false;
             }
             else
