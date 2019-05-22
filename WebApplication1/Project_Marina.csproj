@@ -74,6 +74,12 @@
     <Content Include="images\boat2.jpg" />
     <Content Include="images\boat3.jpg" />
     <Content Include="images\cvm_marina_map.png" />
+    <Content Include="images\dock1.jpg" />
+    <Content Include="images\dock2.jpg" />
+    <Content Include="images\dock3.jpg" />
+    <Content Include="images\dock4k1.jpg" />
+    <Content Include="images\dock4k2.jpg" />
+    <Content Include="images\dock4k3.jpg" />
     <Content Include="images\inlandmarina_banner.jpg" />
     <Content Include="images\poweredbyaspnet.gif" />
     <Content Include="LeaseSlipPage.aspx" />
