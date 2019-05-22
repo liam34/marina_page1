@@ -120,6 +120,7 @@ namespace WebApplication1
             TextBox3.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
             Button2.Focus();
             Calendar1.Visible = false;
+            TextBox3.Visible = true;
         }
 
         protected void Calendar2_SelectionChanged(object sender, EventArgs e)
@@ -131,6 +132,7 @@ namespace WebApplication1
             {
                 Button2.Focus();
                 Calendar2.Visible = false;
+                TextBox4.Visible = true;
             }
             else
             {
@@ -162,6 +164,17 @@ namespace WebApplication1
         {
 
             if ((TextBox1.Text == "") || (TextBox2.Text == "")||(TextBox3.Text == "") || (TextBox4.Text == ""))
+            {
+                MessageBox.Show(" width and length,arrive date, leave date must be filled! ");
+                GridView1.Visible = false;
+            }
+            else
+            { GridView1.Visible = true; }
+        }
+
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            if ((TextBox1.Text == "") || (TextBox2.Text == "") || (TextBox3.Text == "") || (TextBox4.Text == ""))
             {
                 MessageBox.Show(" width and length,arrive date, leave date must be filled! ");
                 GridView1.Visible = false;

@@ -78,44 +78,43 @@
         </p>
         <p>Please input the information of your boat:</p>
         <p>
-            <asp:Label ID="Label1" runat="server" Text="Boat Width(ft):"></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" Width="88px" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" Height="29px"></asp:TextBox>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Label ID="Label2" runat="server" Text="Boat Length(ft):"></asp:Label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button13" runat="server" CausesValidation="False" CssClass="offset-sm-0" Text="Boat width(ft):" style="margin-left: 14px" Width="131px" />
+            &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="88px" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" Height="29px" CssClass="offset-sm-0"></asp:TextBox>
+            <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="Width from 8 to 12" ForeColor="Red" MaximumValue="12" MinimumValue="8" Type="Integer"></asp:RangeValidator>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button12" runat="server" CausesValidation="False" Text="Boat Lenth(ft):" CssClass="offset-sm-0" />
             <asp:TextBox ID="TextBox2" runat="server" Width="75px" AutoPostBack="true" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+        &nbsp;<asp:Button ID="Button6" runat="server" CssClass="auto-style10" Text="Arrive date" Width="119px" OnClick="Button6_Click" Height="34px" CausesValidation="False" style="margin-left: 32px" />
+
+            <asp:TextBox ID="TextBox3" runat="server" Width="96px" Visible="False"></asp:TextBox>
+
+<asp:Button ID="Button8" runat="server" Text="Leave date" CssClass="auto-style11" OnClick="Button8_Click" Height="33px" style="margin-left: 43px" CausesValidation="False" Width="112px" />
+            <asp:TextBox ID="TextBox4" runat="server" Width="90px" Visible="False"></asp:TextBox>
         </p>
         <p>
       
-<asp:Button ID="Button6" runat="server" CssClass="auto-style10" Text="Arrive date" Width="113px" OnClick="Button6_Click" Height="29px" />
-
-            <asp:TextBox ID="TextBox3" runat="server" Width="96px"></asp:TextBox>
-
-<asp:Button ID="Button8" runat="server" Text="Leave date" CssClass="auto-style11" OnClick="Button8_Click" Height="31px" style="margin-left: 80px" />
-            <asp:TextBox ID="TextBox4" runat="server" Width="90px"></asp:TextBox>
-            <asp:Calendar ID="Calendar1" runat="server" Visible="False" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="184px" NextPrevFormat="FullMonth" TitleFormat="Month" Width="265px" OnSelectionChanged="Calendar1_SelectionChanged">
-                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
-                <DayStyle Width="14%" />
-                <NextPrevStyle Font-Size="8pt" ForeColor="White" />
+            <asp:Calendar ID="Calendar1" runat="server" Visible="False" BackColor="White" BorderColor="Black" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" Width="330px" OnSelectionChanged="Calendar1_SelectionChanged" style="margin-left: 546px" BorderStyle="Solid" CellSpacing="1">
+                <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+                <DayStyle BackColor="#CCCCCC" />
+                <NextPrevStyle Font-Size="8pt" ForeColor="White" Font-Bold="True" />
                 <OtherMonthDayStyle ForeColor="#999999" />
-                <SelectedDayStyle BackColor="#CC3333" ForeColor="White" />
-                <SelectorStyle BackColor="#CCCCCC" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333" Width="1%" />
-                <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
-                <TodayDayStyle BackColor="#CCCC99" />
+                <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                <TitleStyle BackColor="#333399" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" BorderStyle="Solid" />
+                <TodayDayStyle BackColor="#999999" ForeColor="White" />
             </asp:Calendar>
-            <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="Black" DayNameFormat="Shortest" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="Black" Height="220px" NextPrevFormat="FullMonth" OnSelectionChanged="Calendar2_SelectionChanged" TitleFormat="Month" Visible="False" Width="258px">
-                <DayHeaderStyle BackColor="#CCCCCC" Font-Bold="True" Font-Size="7pt" ForeColor="#333333" Height="10pt" />
-                <DayStyle Width="14%" />
-                <NextPrevStyle Font-Size="8pt" ForeColor="White" />
+            <asp:Calendar ID="Calendar2" runat="server" BackColor="White" BorderColor="Black" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="250px" NextPrevFormat="ShortMonth" OnSelectionChanged="Calendar2_SelectionChanged" Visible="False" Width="330px" style="margin-left: 983px;margin-top:-250px; " BorderStyle="Solid" CellSpacing="1">
+                <DayHeaderStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" Height="8pt" />
+                <DayStyle BackColor="#CCCCCC" />
+                <NextPrevStyle Font-Size="8pt" ForeColor="White" Font-Bold="True" />
                 <OtherMonthDayStyle ForeColor="#999999" />
-                <SelectedDayStyle BackColor="#CC3333" ForeColor="White" />
-                <SelectorStyle BackColor="#CCCCCC" Font-Bold="True" Font-Names="Verdana" Font-Size="8pt" ForeColor="#333333" Width="1%" />
-                <TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt" />
-                <TodayDayStyle BackColor="#CCCC99" />
+                <SelectedDayStyle BackColor="#333399" ForeColor="White" />
+                <TitleStyle BackColor="#333399" Font-Bold="True" Font-Size="12pt" ForeColor="White" Height="12pt" BorderStyle="Solid" />
+                <TodayDayStyle BackColor="#999999" ForeColor="White" />
             </asp:Calendar>
         </p>
          <p>
       
-             <asp:Label ID="Label4" runat="server" Text="Available Slips Table"></asp:Label>
+             <asp:Button ID="Button11" runat="server" CausesValidation="False" OnClick="Button11_Click" style="margin-left: 80px" Text="Available Slips Table " />
         </p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" OnCreatingModelDataSource="GridView1_CreatingModelDataSource" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Visible="False">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -165,10 +164,10 @@
             <br />
             <br />
      
-            <asp:Button ID="Button9" runat="server" Height="37px" OnClick="Button9_Click" style="margin-left: 113px" Text="See Map" Width="126px" />
-            <asp:Button ID="Button10" runat="server" Height="37px" OnClick="Button10_Click" style="margin-left: 82px" Text="Check available slip" Width="153px" />
-            <asp:Button ID="Button2" runat="server" Text="Add Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="125px" Height="37px" style="margin-left: 110px" />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Cancel Lease" CssClass="auto-style5" Height="37px" Width="124px" style="margin-left: 82px" />
+            <asp:Button ID="Button9" runat="server" Height="37px" OnClick="Button9_Click" style="margin-left: 113px" Text="See Map" Width="126px" CausesValidation="False" />
+            <asp:Button ID="Button10" runat="server" CausesValidation="False" Height="37px" OnClick="Button10_Click" style="margin-left: 82px" Text="Check available slip" Width="153px" />
+            <asp:Button ID="Button2" runat="server" Text="Add Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="125px" Height="37px" style="margin-left: 110px" CausesValidation="False" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Cancel Lease" CssClass="auto-style5" Height="37px" Width="124px" style="margin-left: 82px" CausesValidation="False" />
             <asp:Button ID="Button5" runat="server" Height="37px" Text="Check out" Width="124px" CssClass="auto-style6" style="margin-left: 80px" />
             <br />
             <br />
