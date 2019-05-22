@@ -35,7 +35,7 @@
     <asp:Label ID="Label3" runat="server" Text="Available Slips in the Dock of Marina  Facility"></asp:Label>
     <br />
     <br />
-    <asp:GridView ID="GridView3" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" DataKeyNames="SlipID">
+    <asp:GridView ID="GridView3" runat="server" DataSourceID="SqlDataSource2" AutoGenerateColumns="False" DataKeyNames="SlipID" AllowPaging="True">
         <Columns>
             <asp:BoundField DataField="SlipID" HeaderText="SlipID" InsertVisible="False" ReadOnly="True" SortExpression="SlipID" />
             <asp:BoundField DataField="Width" HeaderText="Width" SortExpression="Width" />
