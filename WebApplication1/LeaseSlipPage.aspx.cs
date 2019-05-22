@@ -46,7 +46,11 @@ namespace WebApplication1
             int SlipID = Convert.ToInt32(slipID);
             int qq1 = Data_Layer.LeaseDB.AddSlip(SlipID, CustomerID);
             if (qq1 > 0)
-            { MessageBox.Show("Add a new lease"); }
+            { MessageBox.Show("Add a new lease");
+               // MessageBox.Show(TextBox3.Text);
+                //MessageBox.Show(GridView2.Rows[0].Cells[4].Text);
+               // GridView2.Rows[1].Cells[1].Text = TextBox3.Text;
+            }
             else
             { MessageBox.Show("Adding new lease is not successul"); }
             GridView1.DataBind();
