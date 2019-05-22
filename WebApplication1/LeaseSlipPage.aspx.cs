@@ -154,5 +154,17 @@ namespace WebApplication1
         {
             Button2.Focus();
         }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+
+            if ((TextBox1.Text == "") || (TextBox2.Text == ""))
+            {
+                MessageBox.Show(" width and length must be filled! ");
+                GridView1.Visible = false;
+            }
+            else
+            { GridView1.Visible = true; }
+        }
     }
 }
