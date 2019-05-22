@@ -5,35 +5,37 @@
 
 <head runat="server">
 
-<title></title>
+    <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="marina.css" rel="stylesheet" />   	
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
-<style>   
+    <link href="marina.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <style>
+   
 </style>
 
-</head>   
- <body>
-     
-                                 <form id="form1" runat="server">
-                                 <div class="banner" />
-                                 <img src="images/inlandmarina_banner.jpg" /><img src="images/inlandmarina_banner.jpg" />
-                                 
-                    
-                                   <ul>
-                                      <li><a href="HomePage.aspx">Home</a></li>
-                                      <li><a href="ContactUs.aspx">Contact Us</a></li>
-                                       <li><a href="DockPage.aspx">Dock Page</a></li>
-                                      <li><a href="Registration.aspx">Registration</a></li>
-                                       <li><a href="Login.aspx">Log in</a></li>
-                                      <li style="float:right"><a class="active" href="#about">About</a></li>
-                                    </ul>
-        
+</head>
+<body>
 
-                 &nbsp;<div class="jumbotron">
-                <h1 class="display-4">Welcome To Inland Marina</h1>
-                <p class="lead">Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major
+    <form id="form1" runat="server">
+
+        <div id="banner" >
+        <img src="images/inlandmarina_banner.jpg"  style="display:block; margin-left: auto; margin-right: auto;"/>
+        </div>
+        <ul>
+            <li><a href="HomePage.aspx">Home</a></li>
+            <li><a href="ContactUs.aspx">Contact Us</a></li>
+            <li><a href="DockPage.aspx">Dock Page</a></li>
+            <li><a href="Registration.aspx">Registration</a></li>
+            <li><a href="Login.aspx">Log in</a></li>
+            
+        </ul>
+
+
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome To Inland Marina</h1>
+            <p class="lead">
+                Welcome to Inland Marina located on the south shore Inland Lake, just a small commute from major
                 centers in the south west.
                 Inland Marina was established in the 1967 shortly after Inland Lake was created as a result of the South
                 West damn. From its humble beginnings, it has grown to be the largest marina on Inland Lake. Due to
@@ -41,85 +43,81 @@
                 south west. Boat owners from California, Arizona, Nevada, and Utah are attracted to the area. Inland
                 Marina has 90 slips ranging in size from 16 to 32 feet in length. Dock services include electrical and
                 fresh water.
-                </p>
-                <hr class="my-4">
-                <p>
-                </div> 
-         
+            </p>
+            <hr class="my-4">
+            <p>
+        </div>
 
-            <div>
-           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
-           </asp:ContentPlaceHolder>
-            </div>
-         
-         
-            <footer class="text-center text-info">  
-            </footer>  
-	
-	
 
-	<footer class="footer-distributed">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
 
-			<div class="footer-left">
 
-				
-				<div>
-				
-				
-			
-				
-			    	</div>
+        <footer class="text-center text-info">
+        </footer>
 
-				<p class="footer-links">
-					<a href="#">Home</a>
-					·
+
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+
+                <div>
+                </div>
+
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    ·
 					<a href="#">Dock Page</a>
-					·
+                    ·
 					<a href="#">Lease Slip Page</a>
-					·
+                    ·
 					<a href="#">ContactUs</a>
-					
-					
-				</p>
 
-				<p class="footer-company-name">InLand Marina LTD. &copy; 2019-2020</p>
-				
-			</div>			
-			<div class="footer-center">
 
-				<div>
+                </p>
 
-				
-					<i class="fa fa-map-marker"></i>
-					<p><span>10230 Jasper Ave, Edmonton, AB T5J 4P6</span> Downtown Edmonton Alberta, Canada</p>
-				</div>
+                <p class="footer-company-name">InLand Marina LTD. &copy; 2019-2020</p>
 
-				<div>
-					<i class="fa fa-phone"></i>
-					<p>1-877-233-4567</p>
-				</div>
-
-				<div>
-					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">info@inlandmarina.com</a></p><br>
-					<!-- <p><img height="110" width="100" src="images/expedia.png"></p> -->
-				</div>
-
-			</div>
-			<div class="footer-right">
-			<p class="footer-company-about">
-			    
-					New Life, New Discoveries, and many more sweet memories. Bon Voyage!
-			</p>
             </div>
-			<div class="footer-icons">					
-			<div>								
-			</div>
-			</div>	
-          <div id="footerContent">
-          <p class="para">Purple Group Co.</p>
-          <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
-         </div>
+            <div class="footer-center">
+
+                <div>
+
+
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>10230 Jasper Ave, Edmonton, AB T5J 4P6</span> Downtown Edmonton Alberta, Canada</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>1-877-233-4567</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="mailto:support@company.com">info@inlandmarina.com</a></p>
+                    <br>
+                    <!-- <p><img height="110" width="100" src="images/expedia.png"></p> -->
+                </div>
+
+            </div>
+            <div class="footer-right">
+                <p class="footer-company-about">
+                    New Life, New Discoveries, and many more sweet memories. Bon Voyage!
+                </p>
+            </div>
+            <div class="footer-icons">
+                <div>
+                </div>
+            </div>
+            <div id="footerContent">
+                <p class="para">Purple Group Co.</p>
+                <asp:Image ID="PoweredByImage" runat="server" ImageUrl="images/poweredbyaspnet.gif" />
+            </div>
 
         </footer>
     </form>
