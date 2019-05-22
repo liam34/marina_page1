@@ -15,8 +15,8 @@ namespace WebApplication1
         {
             string username = Session["username"].ToString();
             Label3.Text = username;
-
-            // custID.Text = GridView3.Rows[0].Cells[0].Text;
+           custID.Text = GridView3.Rows[0].Cells[1].Text;
+          
         }
 
         protected void GridView1_CreatingModelDataSource(object sender, CreatingModelDataSourceEventArgs e)
@@ -124,6 +124,16 @@ namespace WebApplication1
         }
 
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Button2.Focus();
+        }
+
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Map_Button.Focus();
+        }
+
+        protected void Map_Button_Click(object sender, EventArgs e)
         {
             Button2.Focus();
         }

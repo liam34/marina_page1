@@ -5,7 +5,9 @@
         <br />
         <h1>Slip Reservation</h1>
         <p>Welcome       <asp:Label ID="Label3" runat="server" Text="John"></asp:Label>
-            <asp:Label ID="custID" runat="server" Text="1" Visible="False"></asp:Label>
+        </p>
+         <p>
+            <asp:Label ID="custID" runat="server" Text="2" Visible="False"></asp:Label>
         </p>
         <p>please choose&nbsp; Dock :<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" CssClass="au<asp:SqlDataSource runat=" server="">
                 <asp:ListItem Value="1">Dock 1</asp:ListItem>
@@ -24,6 +26,55 @@
                     <asp:ControlParameter ControlID="custID" DefaultValue="1" Name="CustomerID" PropertyName="Text" Type="Int32" />
                 </SelectParameters>
             </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:MarinaConnectionString7 %>" DeleteCommand="DELETE FROM [Customer] WHERE [ID] = @original_ID AND [FirstName] = @original_FirstName AND [LastName] = @original_LastName AND [Phone] = @original_Phone AND [City] = @original_City AND (([UserName] = @original_UserName) OR ([UserName] IS NULL AND @original_UserName IS NULL)) AND (([PassWrd] = @original_PassWrd) OR ([PassWrd] IS NULL AND @original_PassWrd IS NULL))" InsertCommand="INSERT INTO [Customer] ([FirstName], [LastName], [Phone], [City], [UserName], [PassWrd]) VALUES (@FirstName, @LastName, @Phone, @City, @UserName, @PassWrd)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Customer] WHERE ([UserName] = @UserName)" UpdateCommand="UPDATE [Customer] SET [FirstName] = @FirstName, [LastName] = @LastName, [Phone] = @Phone, [City] = @City, [UserName] = @UserName, [PassWrd] = @PassWrd WHERE [ID] = @original_ID AND [FirstName] = @original_FirstName AND [LastName] = @original_LastName AND [Phone] = @original_Phone AND [City] = @original_City AND (([UserName] = @original_UserName) OR ([UserName] IS NULL AND @original_UserName IS NULL)) AND (([PassWrd] = @original_PassWrd) OR ([PassWrd] IS NULL AND @original_PassWrd IS NULL))">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_FirstName" Type="String" />
+                    <asp:Parameter Name="original_LastName" Type="String" />
+                    <asp:Parameter Name="original_Phone" Type="String" />
+                    <asp:Parameter Name="original_City" Type="String" />
+                    <asp:Parameter Name="original_UserName" Type="String" />
+                    <asp:Parameter Name="original_PassWrd" Type="String" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="FirstName" Type="String" />
+                    <asp:Parameter Name="LastName" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="UserName" Type="String" />
+                    <asp:Parameter Name="PassWrd" Type="String" />
+                </InsertParameters>
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="Label3" DefaultValue="Sara" Name="UserName" PropertyName="Text" Type="String" />
+                </SelectParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="FirstName" Type="String" />
+                    <asp:Parameter Name="LastName" Type="String" />
+                    <asp:Parameter Name="Phone" Type="String" />
+                    <asp:Parameter Name="City" Type="String" />
+                    <asp:Parameter Name="UserName" Type="String" />
+                    <asp:Parameter Name="PassWrd" Type="String" />
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_FirstName" Type="String" />
+                    <asp:Parameter Name="original_LastName" Type="String" />
+                    <asp:Parameter Name="original_Phone" Type="String" />
+                    <asp:Parameter Name="original_City" Type="String" />
+                    <asp:Parameter Name="original_UserName" Type="String" />
+                    <asp:Parameter Name="original_PassWrd" Type="String" />
+                </UpdateParameters>
+            </asp:SqlDataSource>
+            <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource3" Visible="False">
+                <Columns>
+                    <asp:CommandField ShowSelectButton="True" />
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                    <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" SortExpression="Phone" />
+                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                    <asp:BoundField DataField="UserName" HeaderText="UserName" SortExpression="UserName" />
+                    <asp:BoundField DataField="PassWrd" HeaderText="PassWrd" SortExpression="PassWrd" />
+                </Columns>
+            </asp:GridView>
         </p>
         <p>Please input the information of your boat:</p>
         <p>
@@ -110,9 +161,18 @@
             <br />
             <br />
             <br />
-            <asp:Button ID="Button2" runat="server" Text="Add Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="127px" />
+            <asp:Button ID="Button9" runat="server" OnClick="Button9_Click" style="margin-left: 123px" Text="See Map" />
+            <asp:Button ID="Button2" runat="server" Text="Add Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="127px" style="margin-left: 171px" />
         <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Cancel Lease" CssClass="auto-style5" Height="33px" Width="150px" style="margin-left: 82px" />
             <asp:Button ID="Button5" runat="server" Height="31px" Text="Check out" Width="160px" CssClass="auto-style6" style="margin-left: 70px" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <img alt="Dock Map" longdesc="Dock Map" src="images/cvm_marina_map.png" style="width: 1297px; height: 873px" /><br />
+            <br />
+            <asp:Button ID="Map_Button" runat="server" OnClick="Map_Button_Click" Text="Go back to Menu" />
+            <br />
             <br />
 
         </div>
