@@ -47,14 +47,14 @@
                 </div> 
          
 
-        <div>
-          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
+            <div>
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
            </asp:ContentPlaceHolder>
             </div>
          
          
             <footer class="text-center text-info">  
-          </footer>  
+            </footer>  
 	
 	
 
