@@ -13,7 +13,10 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string username = Session["username"].ToString();
+            Label3.Text = username;
 
+            // custID.Text = GridView3.Rows[0].Cells[0].Text;
         }
 
         protected void GridView1_CreatingModelDataSource(object sender, CreatingModelDataSourceEventArgs e)
