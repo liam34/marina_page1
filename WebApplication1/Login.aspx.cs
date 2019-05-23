@@ -13,7 +13,12 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    // Refresh this page 60 seconds before session timeout, effectively resetting the session timeout counter.
+            //    MetaRefresh.Attributes["content"] = Convert.ToString((Session.Timeout * 60) - 60) + "Login.aspx?q=" + DateTime.Now.Ticks;
+            //    WindowStatusText = "Last refresh " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,6 +43,9 @@ namespace WebApplication1
                 Label1.Visible = true;
             }
             conn.Close();
+
+            
+
         }
     }
 }
