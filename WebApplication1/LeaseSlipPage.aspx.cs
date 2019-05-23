@@ -16,7 +16,7 @@ namespace WebApplication1
             string username = Session["username"].ToString();
             Label3.Text = username;
            custID.Text = GridView3.Rows[0].Cells[1].Text;
-            Button2.Focus();
+            //Button2.Focus();
           
         }
 
@@ -36,7 +36,7 @@ namespace WebApplication1
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            Button2.Focus();
+           Button10.Focus();
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -47,7 +47,9 @@ namespace WebApplication1
                 int index = GridView1.SelectedIndex;
                 if (index<0)
                 { MessageBox.Show("Select a row in available slips table first!");
-                    return;
+                Button10.Focus();
+                return;
+                
                 }
                 string slipID = GridView1.Rows[index].Cells[1].Text;
                 int SlipID = Convert.ToInt32(slipID);
@@ -57,6 +59,7 @@ namespace WebApplication1
                 if (qq1 > 0)
                 {
                     MessageBox.Show("Add a new lease");
+                   
                     // MessageBox.Show(TextBox3.Text);
                     //MessageBox.Show(GridView2.Rows[0].Cells[4].Text);
                     // GridView2.Rows[1].Cells[1].Text = TextBox3.Text;
@@ -65,7 +68,7 @@ namespace WebApplication1
                 { MessageBox.Show("Adding new lease is not successul"); }
                 GridView1.DataBind();
                 GridView2.DataBind();
-                Button2.Focus();
+                Button10.Focus();
             
         }
 
@@ -76,6 +79,7 @@ namespace WebApplication1
         //    {
         //        MessageBox.Show("Select a row in customer lease record table first!");
         //        return;
+                  
         //    }
         //    string slipID = GridView2.Rows[index].Cells[2].Text;
         //    int SlipID = Convert.ToInt32(slipID);
@@ -93,32 +97,32 @@ namespace WebApplication1
         protected void TextBox1_TextChanged(object sender, EventArgs e)
         {
             GridView1.DataBind();
-            Button2.Focus();
+            Button10.Focus();
         }
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
             GridView1.DataBind();
-            Button2.Focus();
+            Button10.Focus();
         }
 
         protected void Button6_Click(object sender, EventArgs e)
         {
 
             Calendar1.Visible = true;
-            Button2.Focus();
+            Button11.Focus();
         }
 
         protected void Button8_Click(object sender, EventArgs e)
         {
             Calendar2.Visible = true;
-            Button2.Focus();
+             Button11.Focus();
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
         {
             TextBox3.Text = Calendar1.SelectedDate.ToString("yyyy-MM-dd");
-            Button2.Focus();
+            Button10.Focus();
             Calendar1.Visible = false;
             TextBox3.Visible = true;
         }
@@ -130,13 +134,13 @@ namespace WebApplication1
             DateTime date2 = Convert.ToDateTime(TextBox4.Text);
             if (date2 > date1)
             {
-                Button2.Focus();
+                Button10.Focus();
                 Calendar2.Visible = false;
                 TextBox4.Visible = true;
             }
             else
             {
-                Button2.Focus();
+                Button10.Focus();
                 Response.Write("<script>alert('leave date can not early than arrive date')</script>"); }
              }
 
@@ -147,7 +151,7 @@ namespace WebApplication1
 
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Button2.Focus();
+            Button17.Focus();
         }
 
         protected void Button9_Click(object sender, EventArgs e)
@@ -157,7 +161,7 @@ namespace WebApplication1
 
         protected void Map_Button_Click(object sender, EventArgs e)
         {
-            Button2.Focus();
+            Button17.Focus();
         }
 
         protected void Button10_Click(object sender, EventArgs e)
@@ -176,6 +180,7 @@ namespace WebApplication1
                     MessageBox.Show("Sorry, we do not have available slips fit your boats on your date in this dock , please try other docks");
                     DropDownList1.Focus();
                 }
+                Button10.Focus();
             }
         }
 
@@ -192,6 +197,7 @@ namespace WebApplication1
                 { MessageBox.Show("Sorry, we do not have available slips fit your boats on your date in this dock , please try other docks");
                     DropDownList1.Focus();
                 }
+                Button10.Focus();
              
             }
         }
@@ -199,16 +205,19 @@ namespace WebApplication1
         protected void Button14_Click(object sender, EventArgs e)
         {
             GridView2.Visible = true;
+            Button10.Focus();
         }
 
         protected void Button16_Click(object sender, EventArgs e)
         {
             GridView4.Visible = true;
+            Button10.Focus();
         }
 
         protected void GridView2_RowDeleted(object sender, GridViewDeletedEventArgs e)
         {
             GridView1.DataBind();
+            Button10.Focus();
         }
     }
 }
