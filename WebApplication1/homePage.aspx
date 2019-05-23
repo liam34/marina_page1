@@ -2,7 +2,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
+    <div>
+        <br >
+        <br >
+
+    </div>
              
                   
                  <div class="row">
@@ -69,15 +73,11 @@
                   </div>  
                  </div>
                 </div>
-    <br >    
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
+   <div>
+       <br >
+        <br >
+        <br >
+       <br >
+   </div>
     
-  
-
 </asp:Content>
