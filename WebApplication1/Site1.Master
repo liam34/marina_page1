@@ -27,7 +27,7 @@
             <li><a href="ContactUs.aspx">Contact Us</a></li>
             <li><a href="DockPage.aspx">Dock Page</a></li>
             <li><a href="Registration.aspx">Registration</a></li>
-            <li><a href="Login.aspx">Log Log in</a></li>
+            <li><a href="Login.aspx">Log in</a></li>
             
         </ul>
 
