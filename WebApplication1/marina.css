@@ -25,6 +25,10 @@
     
 
 }
+para1 {
+
+    color:purple;
+}
 
 media {
     text-align: left;
@@ -98,6 +102,7 @@ li {
 
 .footer-distributed .footer-left {
     width: 40%;
+    height: 76px;
 }
 
 /* The company logo */
