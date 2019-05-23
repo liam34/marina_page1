@@ -78,18 +78,18 @@
         </p>
         <p>Please input the information of your boat:</p>
         <p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button13" runat="server" CausesValidation="False" CssClass="offset-sm-0" Text="Boat width(ft):" style="margin-left: 14px" Width="131px" />
-            &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="88px" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" Height="29px" CssClass="offset-sm-0"></asp:TextBox>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button13" runat="server" CausesValidation="False" CssClass="offset-sm-0" Text="Boat width(ft):" style="margin-left: -20px" Width="115px" />
+            &nbsp;&nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="49px" AutoPostBack="true" OnTextChanged="TextBox1_TextChanged" Height="28px" CssClass="offset-sm-0"></asp:TextBox>
             <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="TextBox1" Display="Dynamic" ErrorMessage="Width from 8 to 12" ForeColor="Red" MaximumValue="12" MinimumValue="8" Type="Integer"></asp:RangeValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="Button12" runat="server" CausesValidation="False" Text="Boat Lenth(ft):" CssClass="offset-sm-0" />
-            <asp:TextBox ID="TextBox2" runat="server" Width="75px" AutoPostBack="true" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
-        &nbsp;<asp:Button ID="Button6" runat="server" CssClass="auto-style10" Text="Arrive date" Width="119px" OnClick="Button6_Click" Height="34px" CausesValidation="False" style="margin-left: 32px" />
+            <asp:Button ID="Button12" runat="server" CausesValidation="False" Text="Boat Lenth(ft):" CssClass="offset-sm-0" style="margin-left:-20px" Width="122px" />
+            <asp:TextBox ID="TextBox2" runat="server" Width="52px" AutoPostBack="true" OnTextChanged="TextBox2_TextChanged" Height="27px"></asp:TextBox>
+        &nbsp;<asp:Button ID="Button6" runat="server" CssClass="auto-style10" Text="Arrive date" Width="119px" OnClick="Button6_Click" Height="33px" CausesValidation="False" style="margin-left: 58px" />
 
             <asp:TextBox ID="TextBox3" runat="server" Width="96px" Visible="False"></asp:TextBox>
 
 <asp:Button ID="Button8" runat="server" Text="Leave date" CssClass="auto-style11" OnClick="Button8_Click" Height="33px" style="margin-left: 43px" CausesValidation="False" Width="112px" />
-            <asp:TextBox ID="TextBox4" runat="server" Width="90px" Visible="False"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" Width="97px" Visible="False"></asp:TextBox>
         </p>
         <p>
       
@@ -114,7 +114,7 @@
         </p>
          <p>
       
-             <asp:Button ID="Button11" runat="server" CausesValidation="False" OnClick="Button11_Click" style="margin-left: 80px" Text="Available Slips Table " />
+             <asp:Button ID="Button11" runat="server" CausesValidation="False" OnClick="Button11_Click" style="margin-left: 0px" Text="See Available Slips " Width="136px" />
         </p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" OnCreatingModelDataSource="GridView1_CreatingModelDataSource" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Visible="False">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
@@ -141,7 +141,7 @@
        
             <asp:Label ID="Label5" runat="server" Text="Customer Lease Record "></asp:Label>
             <asp:GridView ID="GridView2" runat="server" CssClass="auto-style3" Height="16px" Width="16px" AutoPostBack="true" DataSourceID="SqlDataSource2" AllowPaging="True" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="ID" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" style="margin-top:0px">
-                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                <AlternatingRowStyle BackColor="White" />
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -150,16 +150,16 @@
                     <asp:BoundField DataField="ArriveDate" HeaderText="ArriveDate" SortExpression="ArriveDate" />
                     <asp:BoundField DataField="LeaveDate" HeaderText="LeaveDate" SortExpression="LeaveDate" />
                 </Columns>
-                <EditRowStyle BackColor="#999999" />
-                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-                <SortedAscendingCellStyle BackColor="#E9E7E2" />
-                <SortedAscendingHeaderStyle BackColor="#506C8C" />
-                <SortedDescendingCellStyle BackColor="#FFFDF8" />
-                <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+                <EditRowStyle BackColor="#7C6F57" />
+                <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                <RowStyle BackColor="#E3EAEB" />
+                <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                <SortedAscendingHeaderStyle BackColor="#246B61" />
+                <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                <SortedDescendingHeaderStyle BackColor="#15524A" />
             </asp:GridView>
             <br />
             <br />
