@@ -22,7 +22,12 @@
 .content-text{
     font-size:large;
     color:cornflowerblue;
+    
 
+}
+
+media {
+    text-align: left;
 }
 
 .banner-boat {

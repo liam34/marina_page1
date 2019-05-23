@@ -69,13 +69,13 @@
                 </div>
 
                 <p class="footer-links">
-                    <a href="#">Home</a>
+                    <a href="HomePage.aspx">Home</a>
                     ·
-					<a href="#">Dock Page</a>
+					<a href="DockPage.aspx">Dock Page</a>
                     ·
-					<a href="#">Lease Slip Page</a>
+					<a href="LeaseSlipPage.aspx">Lease Slip Page</a>
                     ·
-					<a href="#">ContactUs</a>
+					<a href="ContactUs.aspx">ContactUs</a>
 
 
                 </p>
@@ -89,12 +89,12 @@
 
 
                     <i class="fa fa-map-marker"></i>
-                    <p><span>10230 Jasper Ave, Edmonton, AB T5J 4P6</span> Downtown Edmonton Alberta, Canada</p>
+                    <p><span>Inland Lake Marina Box 123 Inland Lake, Arizona 86038 US</span></p>
                 </div>
 
                 <div>
                     <i class="fa fa-phone"></i>
-                    <p>1-877-233-4567</p>
+                    <p>(Main office) 928-450-2234</p>
                 </div>
 
                 <div>
