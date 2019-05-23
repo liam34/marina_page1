@@ -69,21 +69,21 @@ namespace WebApplication1
             
         }
 
-        protected void Button4_Click(object sender, EventArgs e)
-        {
-            int index = GridView2.SelectedIndex;
-            if (index < 0)
-            {
-                MessageBox.Show("Select a row in customer lease record table first!");
-                return;
-            }
-            string slipID = GridView2.Rows[index].Cells[2].Text;
-            int SlipID = Convert.ToInt32(slipID);
-            int qq1 = Data_Layer.LeaseDB.DeleLease(SlipID);
-            GridView2.DataBind();
-            GridView1.DataBind();
-            Button4.Focus();
-        }
+        //protected void Button4_Click(object sender, EventArgs e)
+        //{
+        //    int index = GridView2.SelectedIndex;
+        //    if (index < 0)
+        //    {
+        //        MessageBox.Show("Select a row in customer lease record table first!");
+        //        return;
+        //    }
+        //    string slipID = GridView2.Rows[index].Cells[2].Text;
+        //    int SlipID = Convert.ToInt32(slipID);
+        //    int qq1 = Data_Layer.LeaseDB.DeleLease(SlipID);
+        //    GridView2.DataBind();
+        //    GridView1.DataBind();
+        //    Button4.Focus();
+        //}
 
         protected void SqlDataSource2_Updating(object sender, SqlDataSourceCommandEventArgs e)
         {
@@ -194,6 +194,21 @@ namespace WebApplication1
                 }
              
             }
+        }
+
+        protected void Button14_Click(object sender, EventArgs e)
+        {
+            GridView2.Visible = true;
+        }
+
+        protected void Button16_Click(object sender, EventArgs e)
+        {
+            GridView4.Visible = true;
+        }
+
+        protected void GridView2_RowDeleted(object sender, GridViewDeletedEventArgs e)
+        {
+            GridView1.DataBind();
         }
     }
 }

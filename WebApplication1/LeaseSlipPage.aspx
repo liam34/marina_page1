@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="LeaseSlipPage.aspx.cs" Inherits="WebApplication1.LeaseSlipPage" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form id="form10" >
+    <div class="div10"> 
+    <form id="form10" >
         <br />
         <h1>Slip Reservation</h1>
         <p>Welcome       <asp:Label ID="Label3" runat="server" Text="John"></asp:Label>
@@ -9,7 +10,8 @@
          <p>
             <asp:Label ID="custID" runat="server" Text="2" Visible="False"></asp:Label>
         </p>
-        <p>please choose&nbsp; Dock :<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" CssClass="au<asp:SqlDataSource runat=" server="">
+        <p>please choose&nbsp; Dock :<asp:Button ID="Button16" runat="server" Height="31px" style="margin-left: 0px" Text="Check dock information" OnClick="Button16_Click" Width="195px" />
+            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" CssClass="au<asp:SqlDataSource runat=" server="" style="margin-left: 79px">
                 <asp:ListItem Value="1">Dock 1</asp:ListItem>
                 <asp:ListItem Value="2">Dock 2</asp:ListItem>
                 <asp:ListItem Value="3">Dock 3</asp:ListItem>
@@ -21,10 +23,34 @@
                 <asp:ControlParameter ControlID="DropDownList1" DefaultValue="1" Name="DockID" PropertyName="SelectedValue" Type="Int32" />
             </SelectParameters>
         </asp:SqlDataSource>
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MarinaConnectionString5 %>" SelectCommand="SELECT * FROM [Lease] WHERE ([CustomerID] = @CustomerID)" OnUpdating="SqlDataSource2_Updating">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:MarinaConnectionString5 %>" SelectCommand="SELECT * FROM [Lease] WHERE ([CustomerID] = @CustomerID)" OnUpdating="SqlDataSource2_Updating" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Lease] WHERE [ID] = @original_ID AND [SlipID] = @original_SlipID AND [CustomerID] = @original_CustomerID AND (([ArriveDate] = @original_ArriveDate) OR ([ArriveDate] IS NULL AND @original_ArriveDate IS NULL)) AND (([LeaveDate] = @original_LeaveDate) OR ([LeaveDate] IS NULL AND @original_LeaveDate IS NULL))" InsertCommand="INSERT INTO [Lease] ([SlipID], [CustomerID], [ArriveDate], [LeaveDate]) VALUES (@SlipID, @CustomerID, @ArriveDate, @LeaveDate)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Lease] SET [SlipID] = @SlipID, [CustomerID] = @CustomerID, [ArriveDate] = @ArriveDate, [LeaveDate] = @LeaveDate WHERE [ID] = @original_ID AND [SlipID] = @original_SlipID AND [CustomerID] = @original_CustomerID AND (([ArriveDate] = @original_ArriveDate) OR ([ArriveDate] IS NULL AND @original_ArriveDate IS NULL)) AND (([LeaveDate] = @original_LeaveDate) OR ([LeaveDate] IS NULL AND @original_LeaveDate IS NULL))">
+                <DeleteParameters>
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_SlipID" Type="Int32" />
+                    <asp:Parameter Name="original_CustomerID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="original_ArriveDate" />
+                    <asp:Parameter DbType="Date" Name="original_LeaveDate" />
+                </DeleteParameters>
+                <InsertParameters>
+                    <asp:Parameter Name="SlipID" Type="Int32" />
+                    <asp:Parameter Name="CustomerID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="ArriveDate" />
+                    <asp:Parameter DbType="Date" Name="LeaveDate" />
+                </InsertParameters>
                 <SelectParameters>
                     <asp:ControlParameter ControlID="custID" DefaultValue="1" Name="CustomerID" PropertyName="Text" Type="Int32" />
                 </SelectParameters>
+                <UpdateParameters>
+                    <asp:Parameter Name="SlipID" Type="Int32" />
+                    <asp:Parameter Name="CustomerID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="ArriveDate" />
+                    <asp:Parameter DbType="Date" Name="LeaveDate" />
+                    <asp:Parameter Name="original_ID" Type="Int32" />
+                    <asp:Parameter Name="original_SlipID" Type="Int32" />
+                    <asp:Parameter Name="original_CustomerID" Type="Int32" />
+                    <asp:Parameter DbType="Date" Name="original_ArriveDate" />
+                    <asp:Parameter DbType="Date" Name="original_LeaveDate" />
+                </UpdateParameters>
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:MarinaConnectionString7 %>" DeleteCommand="DELETE FROM [Customer] WHERE [ID] = @original_ID AND [FirstName] = @original_FirstName AND [LastName] = @original_LastName AND [Phone] = @original_Phone AND [City] = @original_City AND (([UserName] = @original_UserName) OR ([UserName] IS NULL AND @original_UserName IS NULL)) AND (([PassWrd] = @original_PassWrd) OR ([PassWrd] IS NULL AND @original_PassWrd IS NULL))" InsertCommand="INSERT INTO [Customer] ([FirstName], [LastName], [Phone], [City], [UserName], [PassWrd]) VALUES (@FirstName, @LastName, @Phone, @City, @UserName, @PassWrd)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Customer] WHERE ([UserName] = @UserName)" UpdateCommand="UPDATE [Customer] SET [FirstName] = @FirstName, [LastName] = @LastName, [Phone] = @Phone, [City] = @City, [UserName] = @UserName, [PassWrd] = @PassWrd WHERE [ID] = @original_ID AND [FirstName] = @original_FirstName AND [LastName] = @original_LastName AND [Phone] = @original_Phone AND [City] = @original_City AND (([UserName] = @original_UserName) OR ([UserName] IS NULL AND @original_UserName IS NULL)) AND (([PassWrd] = @original_PassWrd) OR ([PassWrd] IS NULL AND @original_PassWrd IS NULL))">
                 <DeleteParameters>
@@ -63,6 +89,26 @@
                     <asp:Parameter Name="original_PassWrd" Type="String" />
                 </UpdateParameters>
             </asp:SqlDataSource>
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:MarinaConnectionString8 %>" SelectCommand="SELECT * FROM [Dock]"></asp:SqlDataSource>
+        </p>
+        <p>
+            <asp:GridView ID="GridView4" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataKeyNames="ID" DataSourceID="SqlDataSource4" Visible="False">
+                <Columns>
+                    <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
+                    <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
+                    <asp:CheckBoxField DataField="WaterService" HeaderText="WaterService" SortExpression="WaterService" />
+                    <asp:CheckBoxField DataField="ElectricalService" HeaderText="ElectricalService" SortExpression="ElectricalService" />
+                </Columns>
+                <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+                <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+                <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+                <RowStyle BackColor="White" ForeColor="#003399" />
+                <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                <SortedAscendingCellStyle BackColor="#EDF6F6" />
+                <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+                <SortedDescendingCellStyle BackColor="#D6DFDF" />
+                <SortedDescendingHeaderStyle BackColor="#002876" />
+            </asp:GridView>
             <asp:GridView ID="GridView3" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource3" Visible="False">
                 <Columns>
                     <asp:CommandField ShowSelectButton="True" />
@@ -114,10 +160,10 @@
         </p>
          <p>
       
-             <asp:Button ID="Button11" runat="server" CausesValidation="False" OnClick="Button11_Click" style="margin-left: 0px" Text="See Available Slips " Width="136px" />
-        </p>
+             <asp:Button ID="Button11" runat="server" CausesValidation="False" OnClick="Button11_Click" style="margin-left: 0px" Text="See Available Slips " Width="149px" />
+        &nbsp;</p>
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="ID" DataSourceID="SqlDataSource1" OnCreatingModelDataSource="GridView1_CreatingModelDataSource" CellPadding="4" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Visible="False">
-            <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+            <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:CommandField ShowSelectButton="True" />
                 <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
@@ -125,25 +171,26 @@
                 <asp:BoundField DataField="Length" HeaderText="Length" SortExpression="Length" />
                 <asp:BoundField DataField="DockID" HeaderText="DockID" SortExpression="DockID" />
             </Columns>
-            <EditRowStyle BackColor="#999999" />
-            <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-            <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#E9E7E2" />
-            <SortedAscendingHeaderStyle BackColor="#506C8C" />
-            <SortedDescendingCellStyle BackColor="#FFFDF8" />
-            <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
+            <EditRowStyle BackColor="#2461BF" />
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <RowStyle BackColor="#EFF3FB" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+            <SortedDescendingHeaderStyle BackColor="#4870BE" />
         </asp:GridView>
         <div>
+            <asp:Button ID="Button17" runat="server" Text=" Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="114px" Height="55px" style="margin-left: 1px" CausesValidation="False" />
+            <br />
             <br />
        
             <asp:Label ID="Label5" runat="server" Text="Customer Lease Record "></asp:Label>
-            <asp:GridView ID="GridView2" runat="server" CssClass="auto-style3" Height="16px" Width="16px" AutoPostBack="true" DataSourceID="SqlDataSource2" AllowPaging="True" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="ID" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" style="margin-top:0px">
+            <asp:GridView ID="GridView2" runat="server" CssClass="auto-style3" Height="16px" Width="16px" AutoPostBack="true" DataSourceID="SqlDataSource2" AllowPaging="True" AllowSorting="True" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateColumns="False" DataKeyNames="ID" OnSelectedIndexChanged="GridView2_SelectedIndexChanged" style="margin-top:0px" AutoGenerateDeleteButton="True" AutoGenerateSelectButton="True" OnRowDeleted="GridView2_RowDeleted" Visible="False">
                 <AlternatingRowStyle BackColor="White" />
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
                     <asp:BoundField DataField="ID" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="ID" />
                     <asp:BoundField DataField="SlipID" HeaderText="SlipID" SortExpression="SlipID" />
                     <asp:BoundField DataField="CustomerID" HeaderText="CustomerID" SortExpression="CustomerID" />
@@ -164,10 +211,9 @@
             <br />
             <br />
      
-            <asp:Button ID="Button9" runat="server" Height="37px" OnClick="Button9_Click" style="margin-left: 113px" Text="See Map" Width="126px" CausesValidation="False" />
+            <asp:Button ID="Button9" runat="server" Height="37px" OnClick="Button9_Click" style="margin-left: 0px" Text="See Map" Width="126px" CausesValidation="False" />
             <asp:Button ID="Button10" runat="server" CausesValidation="False" Height="37px" OnClick="Button10_Click" style="margin-left: 82px" Text="Check available slip" Width="153px" />
-            <asp:Button ID="Button2" runat="server" Text="Add Lease" OnClick="Button2_Click" CssClass="auto-style7" Width="125px" Height="37px" style="margin-left: 110px" CausesValidation="False" />
-        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Cancel Lease" CssClass="auto-style5" Height="37px" Width="124px" style="margin-left: 82px" CausesValidation="False" />
+            <asp:Button ID="Button14" runat="server" Height="37px" OnClick="Button14_Click" style="margin-left: 75px" Text="Check customer lease record" Width="221px" />
             <asp:Button ID="Button5" runat="server" Height="37px" Text="Check out" Width="124px" CssClass="auto-style6" style="margin-left: 80px" />
             <br />
             <br />
@@ -180,4 +226,5 @@
 
         </div>
     </form>
+        </div>
 </asp:Content>

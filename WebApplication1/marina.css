@@ -242,8 +242,9 @@ li {
             }
 
 /*style for Lease page*/
-    #form10 {
-        margin-left: 130px;
+    .div10 {
+        margin-left: -130px;
+        padding-left:-200px;
     }
 
     .auto-style1 {
