@@ -11,6 +11,15 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Username"] != null)
+            {
+                Label1.Text = "Welcome, " + Session["Username"] + "!";
+            }
+            else
+            {
+                Label1.Text = "Welcome. Please log in.";
+            }
+
 
         }
     }

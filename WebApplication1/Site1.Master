@@ -27,7 +27,7 @@
             <li><a href="ContactUs.aspx">Contact Us</a></li>
             <li><a href="DockPage.aspx">Dock Page</a></li>
             <li><a href="Registration.aspx">Registration</a></li>
-            <li><a href="Login.aspx">Log in</a></li>
+            <li><a href="Login.aspx">Log Log in</a></li>
             
         </ul>
 
@@ -46,6 +46,7 @@
             </p>
             <hr class="my-4">
             <p>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </div>
 
 
@@ -69,7 +70,7 @@
                 </div>
 
                 <p class="footer-links">
-                    <a href="HomePage.aspx">Home</a>
+                    <a href="HomePage.aspx">Home
                     ·
 					<a href="DockPage.aspx">Dock Page</a>
                     ·
