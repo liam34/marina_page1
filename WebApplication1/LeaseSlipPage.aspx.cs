@@ -169,7 +169,14 @@ namespace WebApplication1
                 GridView1.Visible = false;
             }
             else
-            { GridView1.Visible = true; }
+            { GridView1.Visible = true;
+                
+                if (GridView1.Rows.Count == 0)
+                {
+                    MessageBox.Show("Sorry, we do not have available slips fit your boats on your date in this dock , please try other docks");
+                    DropDownList1.Focus();
+                }
+            }
         }
 
         protected void Button11_Click(object sender, EventArgs e)
@@ -180,7 +187,13 @@ namespace WebApplication1
                 GridView1.Visible = false;
             }
             else
-            { GridView1.Visible = true; }
+            { GridView1.Visible = true;
+                if (GridView1.Rows.Count==0)
+                { MessageBox.Show("Sorry, we do not have available slips fit your boats on your date in this dock , please try other docks");
+                    DropDownList1.Focus();
+                }
+             
+            }
         }
     }
 }
