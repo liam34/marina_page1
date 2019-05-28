@@ -6,14 +6,28 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using System.Windows.Forms;
+using Bussiness_Layer;
+using Data_Layer;
 
 namespace WebApplication1
 {
     public partial class LeaseSlipPage : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string username = Session["username"].ToString();
+            //Label3.Text = username;
+           
+           // custID.Text = GridView3.Rows[0].Cells[0].Text;
 
+
+
+
+
+
+
+            // MessageBox.Show(Data_Layer.LeaseDB.GetcustID(username).ToString());
         }
 
         protected void GridView1_CreatingModelDataSource(object sender, CreatingModelDataSourceEventArgs e)
@@ -123,6 +137,16 @@ namespace WebApplication1
         protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
         {
             Button2.Focus();
+        }
+
+        protected void GridView2_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+
+        }
+
+        protected void GridView2_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+
         }
     }
 }

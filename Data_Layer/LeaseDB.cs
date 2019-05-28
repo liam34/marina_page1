@@ -41,12 +41,13 @@ namespace Data_Layer
 
         }
 
+       
 
 
 
 
 
-        public static int AddSlip(int SlipID, int CustomerID)
+            public static int AddSlip(int SlipID, int CustomerID)
         {
             string sql = "INSERT INTO Lease (SlipID,CustomerID)  VALUES  (@SlipID,@CustomerID)";
             SqlConnection connection = Data_Layer.MarinaDB.GetConnection();
@@ -57,6 +58,8 @@ namespace Data_Layer
 
             int qq = command.ExecuteNonQuery();
             return qq;
+
+
         }
 
         public static int DeleLease(int SlipID)

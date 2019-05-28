@@ -14,7 +14,7 @@ namespace Data_Layer
         public static SqlConnection GetConnection()
         {
             SqlConnection connection = new SqlConnection();
-            string ConnectionString = "Data Source=SoftDev;" + "Initial Catalog=Marina;" + "Integrated Security=true;";
+            string ConnectionString = "Data Source=DESKTOP-I8OAD8M;" + "Initial Catalog=Marina;" + "Integrated Security=true;";
 
             connection.ConnectionString = ConnectionString;
             connection.Open();
