@@ -19,7 +19,7 @@
                         <p>- 2019 Princecraft Sportfisher LX 25-4S in Black
                         <p>- 2019 Mercury 150XL 4 Stroke Outboard
                         <p>- Karavan Black Tandem axle trailer
-                        <p>- Spare tire and carrier
+                        <p>- Spare tire and carrier n
                         <p>- Bimini Top w/boot
                         <p>- Select Anti Ski Vinyl Floor                      
                         <p>- Raised Rail upgrade
