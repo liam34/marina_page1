@@ -248,8 +248,12 @@ li {
 
 /*style for Lease page*/
     .div10 {
-        margin-left: -130px;
-        padding-left:-200px;
+        text-align: center;
+        margin-left: 130px;
+        padding-left: 200px;
+    }
+    #form10 {
+        text-align:center;
     }
 
     .auto-style1 {
