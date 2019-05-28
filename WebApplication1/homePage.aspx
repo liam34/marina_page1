@@ -2,7 +2,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    
+    <div>
+        <br >
+        <br >
+
+    </div>
              
                   
                  <div class="row">
@@ -24,7 +28,7 @@
                         <p>- Performance configuration w/full length tri-toon
                         <p>- Built in fuel tank</p>
                        
-                    <a href="#" class="btn btn-primary">Dock 1</a>
+                    <a href="Registration.aspx" class="btn btn-primary">Dock 1</a>
                   </div>
                 </div>
                 <div class="card" style="width: 18rem;">
@@ -43,7 +47,7 @@
                         <p>- Travel cover
                         <p>- Mercury 3 Year OEM warranty
                         <p>- Mercury 2 Year Extended warranty FREE </p>
-                    <a href="#" class="btn btn-primary">Dock 2</a>
+                    <a href="Registration.aspx" class="btn btn-primary">Dock 2</a>
                   </div>
                 </div>
                     <div class="card" style="width: 18rem;">
@@ -65,19 +69,15 @@
                         <p>- Bow rider fill-in cushion
                         <p>- Reflex swim platform mat </p>
 
-                    <a href="#" class="btn btn-primary">Dock 3</a>
+                    <a href="Registration.aspx" class="btn btn-primary">Dock 3</a>
                   </div>  
                  </div>
                 </div>
-    <br >    
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
-    <br > 
+   <div>
+       <br >
+        <br >
+        <br >
+       <br >
+   </div>
     
-  
-
 </asp:Content>

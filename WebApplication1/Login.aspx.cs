@@ -13,38 +13,38 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    // Refresh this page 60 seconds before session timeout, effectively resetting the session timeout counter.
+            //    MetaRefresh.Attributes["content"] = Convert.ToString((Session.Timeout * 60) - 60) + "Login.aspx?q=" + DateTime.Now.Ticks;
+            //    WindowStatusText = "Last refresh " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString();
+            //}
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
             
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-I8OAD8M;Initial Catalog=Marina;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=softdev;Initial Catalog=Marina;Integrated Security=True");
             conn.Open();
-            string query = "SELECT COUNT(1) FROM Customer WHERE username=@username AND pass=@pass";
+            string query = "SELECT COUNT(1) FROM Customer WHERE UserName=@Username AND PassWrd=@Password";
             SqlCommand sqlCmd = new SqlCommand(query, conn);
-            sqlCmd.Parameters.AddWithValue("@username", TextBox1.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@pass", TextBox2.Text.Trim());
-
+            sqlCmd.Parameters.AddWithValue("@Username", TextBox1.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@Password", TextBox2.Text.Trim());
             int count = Convert.ToInt32(sqlCmd.ExecuteScalar());
-            //int count = 1;
             if (count == 1)
             {
                 Session["Username"] = TextBox1.Text.Trim();
-               
-                Button2.Visible = true;
-                
+                Response.Redirect("Dashboard.aspx");
+
                 
             }
             else
             {
                 Label1.Visible = true;
             }
-            
-        }
+            conn.Close();
 
-        protected void TextBox1_TextChanged(object sender, EventArgs e)
-        {
+            
 
         }
     }

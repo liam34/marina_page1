@@ -22,25 +22,39 @@
 .content-text{
     font-size:large;
     color:cornflowerblue;
+    
 
 }
+para1 {
 
-banner{
-    display:inline-block;
+    color:purple;
 }
 
-/*//navigation style*/
-ul {
+media {
+    text-align: left;
+}
+
+.banner-boat {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+}
+    /*//navigation style*/
+    ul 
+    {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
-}
+    }
 
 li {
     float: left;
-}
+   }
 
     li a {
         display: block;
@@ -55,7 +69,7 @@ li {
         }
 
 .active {
-    background-color: #4CAF50;
+    background-color: black;
 }
 
 /*footer design*/
@@ -88,6 +102,7 @@ li {
 
 .footer-distributed .footer-left {
     width: 40%;
+    height: 76px;
 }
 
 /* The company logo */
@@ -232,8 +247,13 @@ li {
             }
 
 /*style for Lease page*/
-    #form10 {
+    .div10 {
+        text-align: center;
         margin-left: 130px;
+        padding-left: 200px;
+    }
+    #form10 {
+        text-align:center;
     }
 
     .auto-style1 {

@@ -2,14 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form action="/" method="post">
         User Name: <br />
-        <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged">qaz</asp:TextBox><br />
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
         Password: <br />
         <asp:TextBox ID="TextBox2" TextMode="Password" runat="server"></asp:TextBox><br /><br />
         <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" /><br />
         <br />
         <asp:Label ID="Label1" runat="server" Text="Error. Please re-enter your username or password" Visible="False"></asp:Label>
-     
-            <br />
-        <asp:Button ID="Button2" runat="server"  style="margin-left: 85px" Text="Book" PostBackUrl="~/LeaseSlipPage.aspx" Visible="False" />
     </form>
 </asp:Content>
