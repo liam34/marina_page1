@@ -1,8 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="LeaseSlipPage.aspx.cs" Inherits="WebApplication1.LeaseSlipPage" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- 
-        
+    <%--<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+         <ContentTemplate>--%>
   
     <div  class="btn-info" style="margin-left:250px"> 
     <form id="form10" ">
@@ -14,7 +15,7 @@
             <asp:Label ID="custID" runat="server" Text="2" Visible="False"></asp:Label>
         </p>
         <p>&nbsp;&nbsp; <asp:Button ID="Button16" runat="server" Height="31px" style="margin-left:-14px" Text="Check dock information" OnClick="Button16_Click" Width="195px" />
-         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" CssClass="au<asp:SqlDataSource runat=" server="" style="margin-left: 161px">
+         <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" CssClass="au<asp:SqlDataSource runat=" server="" style="margin-left: 161px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
                 <asp:ListItem Value="1">Dock 1</asp:ListItem>
                 <asp:ListItem Value="2">Dock 2</asp:ListItem>
                 <asp:ListItem Value="3">Dock 3</asp:ListItem>
@@ -230,6 +231,7 @@
         </div>
     </form>
         </div>.
-     
+      <%-- </ContentTemplate>
+    </asp:UpdatePanel>--%>
 
 </asp:Content>
