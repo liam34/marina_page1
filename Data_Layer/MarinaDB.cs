@@ -13,19 +13,19 @@ namespace Data_Layer
     {
         public static SqlConnection GetConnection()
         {
-            //SqlConnection connection = new SqlConnection();
-            //string ConnectionString = "Data Source=SoftDev;" + "Initial Catalog=Marina;" + "Integrated Security=true;";
-            //connection.ConnectionString = ConnectionString;
+            SqlConnection connection = new SqlConnection();
+            string ConnectionString = "Data Source=SoftDev;" + "Initial Catalog=Marina;" + "Integrated Security=true;";
+            connection.ConnectionString = ConnectionString;
 
             // Remote DB
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "marinapurple.database.windows.net";
-            builder.UserID = "Ye";
-            builder.Password = "Liu123456";
-            builder.InitialCatalog = "Marina";
-            SqlConnection connection = new SqlConnection(builder.ConnectionString);
+            //SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            //builder.DataSource = "marinapurple.database.windows.net";
+            //builder.UserID = "Ye";
+            //builder.Password = "Liu123456";
+            //builder.InitialCatalog = "Marina";
+            //SqlConnection connection = new SqlConnection(builder.ConnectionString);
 
-           
+
             connection.Open();
             return connection;
 
